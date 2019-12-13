@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
+import About from "./components/about.component";
+import Artifact from "./components/artifact.component";
+import Home from "./components/home.component";
+import Login from "./components/login.component";
+import Navigation from './components/navigation.component';
+import Story from './components/story.component';
+import Stories from './components/stories.component';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route exact path="/home"     render={(props) => (<Home {...props} userName="Jason" />)} /> 
+          <Route exact path="/story/:id" component={Story} />
+          <Route exact path="/stories"   component={Stories} /> 
+          <Route exact path="/artifact"  component={Artifact} /> 
+          <Route exact path="/about"     component={About} />
+          <Route exact path="/login"     component={Login} />
+        </Switch>
+      </Router>
     </div>
   );
 }
