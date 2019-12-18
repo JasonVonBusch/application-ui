@@ -40,17 +40,17 @@ export default class Home extends Component {
 
         return(
             <div>
-                {numberOfUsers   <= 0 ? <h1>Welcome Home!</h1>
-                 : username    !== '' ? <h1>Welcome Home, {username}!</h1>
+                {numberOfUsers   <= 0 ? <div className="header">Welcome Home!</div>
+                 : username    !== '' ? <div className="header">Welcome Home, {username}!</div>
                  : null}
                 {numberOfUsers > 0 && username !== '' ?
-                   <div>
+                   <div className="paragraph">
                        <input id="vote" type="text" onChange={this.handleChange}></input>
                        <button onClick={this.handleClick}>Vote!</button>
                    </div>
                  : null}
                 {numberOfUsers > 0 && username !== '' && vote !== '' ?
-                   <h2>You voted: {vote}!</h2>
+                   <div  className="paragraph">You voted: {vote}!</div>
                  : null}
             </div>
         );

@@ -1,13 +1,13 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-import About from "./components/about.component";
-import Artifact from "./components/artifact.component";
-import Home from "./components/home.component";
-import Login from "./components/login.component";
+import About      from "./components/about.component";
+import Artifact   from "./components/artifact.component";
+import Home       from "./components/home.component";
+import Login      from "./components/login.component";
 import Navigation from './components/navigation.component';
-import Story from './components/story.component';
-import Stories from './components/stories.component';
+import Story      from './components/story.component';
+import Stories    from './components/stories.component';
 
 function App() {
   return (

@@ -15,8 +15,11 @@ export default class Login extends Component {
     render() {
         return(
             <div>
-                <input id="username" type="text" onChange={this.handleChange}></input>
-                <button onClick={this.handleClick}>Login</button>
+                <div className="header">Sign-in</div>
+                <div className="paragraph">
+                    <input id="username" type="text" onChange={this.handleChange}></input>
+                    <button onClick={this.handleClick}>Login</button>
+                </div>
             </div>
         );
     }

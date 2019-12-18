@@ -20,33 +20,39 @@ a {
     text-decoration-line: none;
 }
 
+.paragraph {
+    color: black;
+    font-family: sans-serif;
+    padding: 3px 10px 3px 10px;
+}
+
 .tablerow {
     color: black;
     font-family: sans-serif;
     display: -webkit-box;
-  }
+}
 
 .rowitem {
-  padding: 3px 10px 3px 10px;
-  width: 100px;
+    padding: 3px 10px 3px 10px;
+    width: 100px;
 }
 
 .header {
-  color: black;
-  font-style: normal;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: x-large;
-  border-bottom: black;
-  border-width: medium;
-  border-bottom-style: solid;
+    color: black;
+    font-style: normal;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    border-bottom: black;
+    border-width: medium;
+    border-bottom-style: solid;
 }
 
 .title {
-  color: black;
-  font-style: normal;
-  font-family: sans-serif;
-  font-weight: bold;
-  padding: 3px 10px 3px 10px;
-  width: 100px;
+    color: black;
+    font-style: normal;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 3px 10px 3px 10px;
+    width: 100px;
 }
