@@ -37,7 +37,7 @@ export default class Story extends Component {
                     <div className="rowitem">{this.state.story.id}</div>
                     <div className="rowitem">{this.state.story.description}</div>
                 </div>
-                <div><Link to="/stories">BACK</Link></div>
+                <div className="paragraph"><Link to="/stories">BACK TO STORY LIST</Link></div>
             </div>
         );
     }
