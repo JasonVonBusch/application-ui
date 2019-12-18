@@ -9,7 +9,7 @@ export default class Login extends Component {
     }
 
     handleClick(e) {
-        store.UpdateState({username: loginuser})
+        store.UpdateState({username: loginuser, vote: ""})
     }
 
     render() {

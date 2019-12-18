@@ -26,7 +26,7 @@ class Store extends Emitter {
     UpdateState(changes) {
         let existingUser = state.users.find(u => u.id === changes.id);
         if (existingUser){
-            state.users[changes.id] = changes;
+            state.users[changes.id - 1] = changes;
         } else {
             changes.id = state.users.length + 1
             state.users.push(changes);

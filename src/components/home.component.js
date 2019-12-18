@@ -8,6 +8,7 @@ export default class Home extends Component {
     constructor(props) {
         super(props);
         this.getUsername();
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount(){
@@ -28,18 +29,30 @@ export default class Home extends Component {
     }
 
     handleClick(e) {
-        store.UpdateState({id: state.users[state.users.length - 1].id, vote: votevalue});
+        store.UpdateState({username: state.users[state.users.length - 1].username, id: state.users[state.users.length - 1].id, vote: votevalue});
+        this.setState(store.GetState());
     }
 
     render() {
+        let numberOfUsers = state.users.length;
+        let username      = numberOfUsers > 0 ? state.users[numberOfUsers - 1].username : '';
+        let vote          = numberOfUsers > 0 ? state.users[numberOfUsers - 1].vote     : '';
+
         return(
-            <div>{votevalue}</div>
-            //<div>
-            //    <h1>Welcome Home, {state.users[state.users.length - 1].username}!</h1>
-            //    <input id="vote" type="text" onChange={this.handleChange}></input>
-            //    <button onClick={this.handleClick}>Vote!</button>
-            //    <h2>You voted: {state.users[state.users.length - 1].vote}!</h2>
-            //</div>
+            <div>
+                {numberOfUsers   <= 0 ? <h1>Welcome Home!</h1>
+                 : username    !== '' ? <h1>Welcome Home, {username}!</h1>
+                 : null}
+                {numberOfUsers > 0 && username !== '' ?
+                   <div>
+                       <input id="vote" type="text" onChange={this.handleChange}></input>
+                       <button onClick={this.handleClick}>Vote!</button>
+                   </div>
+                 : null}
+                {numberOfUsers > 0 && username !== '' && vote !== '' ?
+                   <h2>You voted: {vote}!</h2>
+                 : null}
+            </div>
         );
     }
 }
