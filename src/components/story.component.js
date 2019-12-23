@@ -33,11 +33,12 @@ export default class Story extends Component {
                   <div className="title">ID</div>
                   <div className="title">Description</div>
                 </div>
-                <div className="tablerow" key={this.state.story.id}>
-                    <div className="rowitem">{this.state.story.id}</div>
-                    <div className="rowitem">{this.state.story.description}</div>
-                </div>
-                <div className="paragraph"><Link to="/stories">BACK TO STORY LIST</Link></div>
+                {this.state.story ? <div className="tablerow" key={this.state.story.id}>
+                                        <div className="rowitem">{this.state.story.id}</div>
+                                        <div className="rowitem">{this.state.story.description}</div>
+                                    </div>
+                : null}
+                <div className="paragraph"><Link to="/storylist">BACK TO STORY LIST</Link></div>
             </div>
         );
     }

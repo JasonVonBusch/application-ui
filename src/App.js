@@ -7,7 +7,7 @@ import Home       from "./components/home.component";
 import Login      from "./components/login.component";
 import Navigation from './components/navigation.component';
 import Story      from './components/story.component';
-import Stories    from './components/stories.component';
+import StoryList    from './components/storylist.component';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/home"     render={(props) => (<Home {...props} userName="Jason" />)} /> 
           <Route exact path="/story/:id" component={Story} />
-          <Route exact path="/stories"   component={Stories} /> 
+          <Route exact path="/storylist"  component={StoryList} /> 
           <Route exact path="/artifact"  component={Artifact} /> 
           <Route exact path="/about"     component={About} />
           <Route exact path="/login"     component={Login} />

@@ -17,7 +17,7 @@ export default class Login extends Component {
             <div>
                 <div className="header">Sign-in</div>
                 <div className="paragraph">
-                    <input id="username" type="text" onChange={this.handleChange}></input>
+                    <input type="text" onChange={this.handleChange}></input>
                     <button onClick={this.handleClick}>Login</button>
                 </div>
             </div>
